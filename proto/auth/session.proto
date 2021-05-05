@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package microservice.auth;
+
+service Session {
+    /* Check service health is online ? */
+    rpc Create (SessionRequest.Create) returns (SessionResponse.Create);
+}
+
+message DeviceData {    
+    string device_name = 1;
+    string device_type = 2;
+    string device_os = 3;
+    string device_token = 4;
+    string app_version = 5;
+    string latitude = 6;
+    string longitude = 7;
+}
+
+message SessionRequest {
+    message Create {
+        DeviceData device_data = 1;
+        string language = 2;
+        string ip = 3;
+    }
+}
+
+message SessionResponse {
+    message Create {
+        string message = 1;
+    }
+}
