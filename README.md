@@ -3,8 +3,9 @@
 
 # Reproduction
 - npm run start:dev
-- open Bloom RPC
+- open BloomRPC
 - import the proto in folder `proto/auth/session.proto`
+- set BloomRPC url to localhost:5001
 - use this on request
 ```
 {
