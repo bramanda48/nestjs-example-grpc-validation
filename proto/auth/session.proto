@@ -3,7 +3,6 @@ syntax = "proto3";
 package microservice.auth;
 
 service Session {
-    /* Check service health is online ? */
     rpc Create (SessionRequest.Create) returns (SessionResponse.Create);
 }
 
