@@ -11,7 +11,6 @@ export class AppController {
     // Define logger
     private readonly logger = new Logger(AppController.name);
 
-	@GrpcMethod('Session', 'Create')
     // @UsePipes(new ValidationPipe({
     //     exceptionFactory: (error: ValidationError[] = []) => {
     //         let errorMessage: string[] = [];
@@ -25,6 +24,7 @@ export class AppController {
     //         });
     //     },
     // }))
+	@GrpcMethod('Session', 'Create')
 	create(@Body() data: CreateSessionDto, metadata: Metadata): CreateSessionResponseDto {
         this.logger.debug(JSON.stringify(data));
 		return new CreateSessionResponseDto('This is response');
