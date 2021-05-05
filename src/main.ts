@@ -19,7 +19,7 @@ async function bootstrap() {
             ],
             loader: {keepCase: true},
         }
-    });
+    }, {inheritAppConfig: true});
 
     // Add validation pipe
     /**
